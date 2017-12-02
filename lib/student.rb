@@ -3,7 +3,7 @@ class Student
   attr_reader :id
 
   def initialize(name,grade)
-    @name, @grade= id, name,grade
+    @name, @grade= name,grade
   end
 
   def self.create_table
