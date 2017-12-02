@@ -6,10 +6,25 @@ class Student
   end
 
   def self.create_table
+    sql=<<-sql
+    CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    grade INTEGER    
+    )
+    sql
+    DB=[:conn].execute(sql)
   end
 
   def self.drop_table
   end
+
+  def save
+  end
+
+  def create
+  end
+    
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
