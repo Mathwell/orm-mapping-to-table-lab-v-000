@@ -10,10 +10,10 @@ class Student
     CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY,
     name TEXT,
-    grade INTEGER    
+    grade INTEGER
     )
     sql
-    DB=[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
 
   def self.drop_table
@@ -24,7 +24,7 @@ class Student
 
   def create
   end
-    
+
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
