@@ -27,7 +27,6 @@ class Student
     sql=<<-sql
     INSERT INTO students (name,grade)
     VALUES (?,?)
-    )
     sql
     DB[:conn].execute(sql, self.name, self.grade)
   end
